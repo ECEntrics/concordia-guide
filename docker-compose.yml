@@ -7,12 +7,10 @@ services:
     restart: always
     env_file:
       - ./env/apella-guide.env
-    # ports:
-    #   - "8000:8000"
     expose:
       - "8000"
     volumes:
-      - ./src/:/usr/share/nginx/html:ro
+      - ./src/:/var/www/servers/apella-guide/
     networks:
       - janus_apella-net
 
