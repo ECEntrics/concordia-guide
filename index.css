@@ -1,0 +1,15 @@
+.light-mode-button {
+	background: #000;
+	border-color: #000;
+	color: lightgrey;
+}
+
+.dark-mode-button {
+	background: lightgrey;
+	border-color: black;
+}
+
+.light-mode-button,.dark-mode-button {
+	border-radius: 100px;
+	border-style: solid;
+}
