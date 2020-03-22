@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  apella-guide:
+    image: nginx
+    container_name: apella-guide
+    restart: always
+    env_file:
+      - ./env/apella-guide.env
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src/:/usr/share/nginx/html:ro
+
+# Networks in use
+networks:
+  apella-net:
+    driver: bridge
