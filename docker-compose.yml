@@ -2,17 +2,21 @@ version: '3.7'
 
 services:
   apella-guide:
-    image: nginx
+    build: ./
     container_name: apella-guide
     restart: always
     env_file:
       - ./env/apella-guide.env
-    ports:
-      - "8080:80"
+    # ports:
+    #   - "8000:8000"
+    expose:
+      - "8000"
     volumes:
       - ./src/:/usr/share/nginx/html:ro
+    networks:
+      - janus_apella-net
 
 # Networks in use
 networks:
-  apella-net:
-    driver: bridge
+  janus_apella-net:
+    external: true
