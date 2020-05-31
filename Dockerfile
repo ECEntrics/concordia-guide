@@ -1,5 +1,6 @@
 FROM alpine:3.10 as base
-LABEL maintainer="Fanakis Apostolos <apotwohd@gmail.com>"
+LABEL maintainers.1="Fanakis Apostolos <apotwohd@gmail.com>"
+LABEL maintainers.2="Panagiotis Nikolaidis <ezerous@gmail.com>"
 
 RUN apk add --update --no-cache openrc lighttpd \
 	&& rm -rf /var/cache/apk/*
