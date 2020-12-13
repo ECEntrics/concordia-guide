@@ -1,10 +1,10 @@
 build:
-	@docker-compose -p apella-guide build;
+	@docker-compose -p concordia-guide build;
 run:
-	@docker-compose -p apella-guide up -d
+	@docker-compose -p concordia-guide up -d
 stop:
-	@docker-compose -p apella-guide down
+	@docker-compose -p concordia-guide down
 stop-clean-data:
-	@docker-compose -p apella-guide down -v
+	@docker-compose -p concordia-guide down -v
 clean-images:
 	@docker rmi `docker images -q -f "dangling=true"`

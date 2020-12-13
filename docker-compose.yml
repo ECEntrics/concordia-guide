@@ -1,20 +1,20 @@
 version: '3.7'
 
 services:
-  apella-guide:
+  concordia-guide:
     build: ./
-    container_name: apella-guide
+    container_name: concordia-guide
     restart: always
     env_file:
-      - ./env/apella-guide.env
+      - ./env/concordia-guide.env
     expose:
       - "8000"
     volumes:
-      - ./src/:/var/www/servers/apella-guide/
+      - ./src/:/var/www/servers/concordia-guide/
     networks:
-      - janus_apella-net
+      - janus_concordia_net
 
 # Networks in use
 networks:
-  janus_apella-net:
+  janus_concordia_net:
     external: true
