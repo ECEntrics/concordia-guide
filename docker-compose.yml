@@ -3,18 +3,20 @@ version: '3.7'
 services:
   concordia-guide:
     build: ./
-    container_name: concordia-guide
+    container_name: concordia-guide-staging
     restart: always
     env_file:
       - ./env/concordia-guide.env
     expose:
-      - "8000"
+      - "8010"
+    ports:
+      - 8010:8010
     volumes:
       - ./src/:/var/www/servers/concordia-guide/
     networks:
-      - ecentrics_concordia_production_network
+      - ecentrics_concordia_staging_network
 
 # Networks in use
 networks:
-  ecentrics_concordia_production_network:
+  ecentrics_concordia_staging_network:
     external: true

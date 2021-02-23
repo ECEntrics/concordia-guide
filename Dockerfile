@@ -9,7 +9,7 @@ RUN rc-update add lighttpd default
 FROM base as final
 
 COPY lighttpd.conf /etc/lighttpd/lighttpd.conf
-EXPOSE 8000
+EXPOSE 8010
 
 STOPSIGNAL SIGTERM
 
