@@ -12,9 +12,9 @@ services:
     volumes:
       - ./src/:/var/www/servers/concordia-guide/
     networks:
-      - janus_concordia_net
+      - ecentrics_concordia_production_network
 
 # Networks in use
 networks:
-  janus_concordia_net:
+  ecentrics_concordia_production_network:
     external: true
